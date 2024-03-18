@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include "file_io.h"
 
-extern int read_file(const char *path, char **buffer, size_t *fileSize) {
+extern FILE_IO_RESULT_CODE read_file(const char *path, char **buffer, size_t *fileSize) {
     FILE *filePtr;
 
     filePtr = fopen(path, "rb");
