@@ -21,8 +21,8 @@ static void test_read_file(char *filePath, const size_t expectedContentSize, con
 }
 
 extern void test_file_io_run(void) {
-    test_read_file("./file_io/0_example.txt", 12, "Hello World!");
-    test_read_file("./file_io/1_example.txt", 409, "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.\n\
+    test_read_file("./tests/file_io/0_example.txt", 12, "Hello World!");
+    test_read_file("./tests/file_io/1_example.txt", 409, "Lorem ipsum dolor sit amet, consetetur sadipscing elitr.\n\
 At vero eos et accusam et justo duo dolores et ea rebum.\n\
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.\n\
 At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,\n\

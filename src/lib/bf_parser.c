@@ -69,7 +69,7 @@ extern ASTNode *create_ast_from_lexer(Lexer *lexer) {
 
             case OP_LOOP_END:
                 if (loopStackPtr == 0) {
-                    fprintf(stderr, "Error at character index %llu: Unmatched loop end encountered. Missing loop start.\n", index);
+                    fprintf(stderr, "Error at character index %lu: Unmatched loop end encountered. Missing loop start.\n", index);
                     break; 
                 }  
 
@@ -79,14 +79,14 @@ extern ASTNode *create_ast_from_lexer(Lexer *lexer) {
                 break;
 
             default:
-                fprintf(stderr, "Error at character index %llu: Unrecognized opcode encountered.\n", index);
+                fprintf(stderr, "Error at character index %lu: Unrecognized opcode encountered.\n", index);
                 break;
         }
     }
 
     if (loopStackPtr != 0) {
         for (size_t i = 0; i < loopStackPtr; ++i) {
-            fprintf(stderr, "Error at character index %llu: Unmatched loop start encountered. Missing loop end.\n", loopStack[i]->tokenIndex);
+            fprintf(stderr, "Error at character index %lu: Unmatched loop start encountered. Missing loop end.\n", loopStack[i]->tokenIndex);
         }
         return NULL;
     }
